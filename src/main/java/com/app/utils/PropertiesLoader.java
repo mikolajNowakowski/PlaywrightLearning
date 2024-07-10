@@ -1,0 +1,21 @@
+package com.app.utils;
+
+import org.springframework.stereotype.Service;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+@Service
+public class PropertiesLoader {
+    public Properties loadProperties(String path) {
+        Properties properties = new Properties();
+        try(FileInputStream fis = new FileInputStream(path)) {
+            properties.load(fis);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return properties;
+    }
+
+}
