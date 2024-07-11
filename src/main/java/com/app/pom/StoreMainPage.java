@@ -12,4 +12,8 @@ public class StoreHomePage extends BasePage {
     @LazyAutowired
     private Properties storeHomePageLocatorsProp;
 
+
+
+    private String
+
 }
