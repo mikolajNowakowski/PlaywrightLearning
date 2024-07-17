@@ -1,6 +1,6 @@
-package com.app.utils.impl.csv;
+package com.app.utils.loaders.csv;
 
-import com.app.utils.Loader;
+import com.app.utils.loaders.Loader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

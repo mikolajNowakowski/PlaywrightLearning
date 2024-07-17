@@ -1,6 +1,6 @@
-package com.app.utils.impl.properties;
+package com.app.utils.loaders.properties;
 
-import com.app.utils.Loader;
+import com.app.utils.loaders.Loader;
 import org.springframework.stereotype.Service;
 
 import java.io.FileInputStream;

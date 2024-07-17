@@ -1,0 +1,420 @@
+INFO    2024-07-17 12:35:58,066 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:35:58  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 12:35:58,072 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 12:38:17,209 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:38:17  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 12:38:17,215 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 12:40:51,584 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:40:51  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 12:40:51,589 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 12:41:06,309 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 12:41:06,356 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:47:24,114 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:47:24  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:47:24,118 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:47:51,149 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:47:51  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:47:51,153 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:49:36,364 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:49:36  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:49:36,369 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:53:23,552 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:53:23  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:53:23,559 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:54:23,190 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:54:23  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:54:23,195 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:54:35,711 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 14:54:35,767 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:54:38,527 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:58:20,455 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:58:20  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:58:20,460 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 14:58:31,699 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 14:58:31,755 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:58:33,076 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:58:33,844 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 14:59:58,610 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 14:59:58  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 14:59:58,614 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:00:09,797 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:00:09,850 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:00:11,100 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:00:11,830 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:00:22,562 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:01:21,273 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:01:21  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:01:21,280 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:01:32,975 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:01:33,029 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:01:35,605 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:01:36,901 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:01:48,802 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:02:28,923 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:02:28  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:02:28,929 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:02:40,979 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:02:41,035 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:02:43,565 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:02:44,847 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:02:56,803 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:05:20,558 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:05:20  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:05:20,563 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:05:32,303 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:05:32,391 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:05:34,954 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:05:36,298 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:05:47,981 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:08:24,289 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:08:24  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:08:24,293 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:08:35,618 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:08:35,677 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:08:38,155 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:08:39,462 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:08:51,295 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:09:59,322 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:09:59  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:09:59,327 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:10:10,933 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:10:11,015 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:10:13,359 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:10:14,612 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:10:26,514 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:14:36,617 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:14:36  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:14:36,623 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:14:48,078 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:14:48,135 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:14:49,471 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:14:50,177 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:15:00,843 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:15:43,943 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:15:43  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:15:43,949 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:15:55,678 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:15:55,767 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:15:57,034 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:15:57,791 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:17:23,082 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:17:23  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:17:23,086 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:17:34,655 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:17:34,778 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:17:35,929 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:17:36,666 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:22:56,356 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:22:56  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:22:56,361 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:23:07,633 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:23:07,722 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:23:09,258 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:23:10,025 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:26:37,761 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:26:37  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:26:37,766 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:26:49,237 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:26:49,294 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:26:52,561 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:26:53,965 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:27:06,181 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:30:11,238 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:30:11  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:30:11,244 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:30:24,518 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:30:24,603 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:30:27,037 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:30:28,446 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:30:40,214 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:31:37,612 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:31:37  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:31:37,617 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:31:48,550 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:31:48,612 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:31:50,814 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:31:52,007 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:32:04,115 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:34:35,366 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:34:35  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:34:35,371 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:34:46,563 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:34:46,633 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:34:49,558 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:34:50,953 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:35:02,897 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:37:37,338 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:37:37  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:37:37,342 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:37:48,685 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:37:48,744 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:37:51,678 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:37:52,799 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:38:04,792 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:43:36,021 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:43:36  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:43:36,025 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:43:47,006 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:43:47,066 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:43:49,820 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:43:51,107 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:44:03,239 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:45:33,121 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:45:33  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:45:33,127 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:45:44,137 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:45:44,209 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:45:47,265 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:45:48,555 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:46:00,661 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:49:03,005 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 15:49:03  17-07-24 
+
+
+
+
+
+INFO    2024-07-17 15:49:03,009 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-17 15:49:14,409 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
+INFO    2024-07-17 15:49:14,484 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:49:18,363 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:49:20,119 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-17 15:49:31,965 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url

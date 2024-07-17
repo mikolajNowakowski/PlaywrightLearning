@@ -1,19 +1,20 @@
 package com.app.pom;
 
 import com.app.annotations.LazyAutowired;
-import com.app.annotations.Page;
+import com.app.annotations.WebPage;
+import com.app.model.locators.LocatorsProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 import java.util.Properties;
 
-@Page
-public class StoreHomePage extends BasePage {
+@WebPage
+public  class StoreMainPage extends BasePage {
 
-    @LazyAutowired
-    private Properties storeHomePageLocatorsProp;
+    @Autowired
+    private LocatorsProperties storeHomePageLocatorsProp;
 
 
 
-    private String
 
 }

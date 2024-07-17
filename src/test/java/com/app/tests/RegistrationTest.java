@@ -1,21 +1,26 @@
 package com.app.tests;
 
+import com.app.annotations.LazyAutowired;
+import com.app.pom.StoreMainPage;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Properties;
+public class RegistrationTest extends BaseTest {
 
-public class FirstTest extends BaseTest {
-
-@Autowired
-    private Properties storeHomePageLocatorsProp;
+    @LazyAutowired
+    private StoreMainPage storeMainPage;
 
     @ParameterizedTest
-    @CsvFileSource(resources ="/firstData.csv", numLinesToSkip = 1)
-    public void test(String imie, String nazwisko, int age) {
-
+    @CsvFileSource(resources = "/registration_test.csv", numLinesToSkip = 1)
+    public void registration(String login, String password) {
+        logger.info("DUPSKOOOO");
+        extentManager.logInfo("Dupkaaa");
+        System.out.println(login);
+        System.out.println(password);
+        storeMainPage.goToMainUrl();
     }
 
 }
