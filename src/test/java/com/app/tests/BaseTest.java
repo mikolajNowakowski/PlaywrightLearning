@@ -1,8 +1,6 @@
 package com.app.tests;
 
 import com.app.annotations.LazyAutowired;
-import com.app.utils.date.DataTimeGenerator;
-import com.app.utils.date.patterns.DataTimePattern;
 import com.app.utils.extent_reports.manager.ExtentManager;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
@@ -10,7 +8,6 @@ import com.microsoft.playwright.Playwright;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.apache.log4j.RollingFileAppender;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,14 +15,10 @@ import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.RegisterExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Service;
-import org.springframework.test.context.event.annotation.AfterTestExecution;
 import org.springframework.test.context.event.annotation.BeforeTestExecution;
 
-import java.lang.reflect.Method;
 import java.util.Optional;
 
 import static com.app.utils.date.DataTimeGenerator.*;
@@ -35,16 +28,15 @@ import static com.app.utils.date.patterns.DataTimePattern.*;
 public abstract class BaseTest {
     @Value("${log4j.config.path}")
     private String log4jConfigPath;
-    @Autowired
+    @LazyAutowired
     private Playwright playwright;
-    @Autowired
+    @LazyAutowired
     private Page page;
-    @Autowired
+    @LazyAutowired
     private Browser browser;
-
-    @Autowired
+    @LazyAutowired
     protected ExtentManager extentManager;
-    protected static final Logger logger = Logger.getLogger(BaseTest.class);
+    protected static final Logger log = Logger.getLogger(BaseTest.class);
 
     @AfterEach
     public void after() {
@@ -78,15 +70,14 @@ public abstract class BaseTest {
 
     @BeforeAll
     public static void beforeAll() {
-        logger.info("\n\n\n\n\n Tests execution starts => %s \n\n\n\n\n".formatted(getDateTime(HHMMSSDDMMYY)));
-        logger.info("Test execution starts ! ! !");
+        log.info("\n\n\n\n\n Tests execution starts => %s \n\n\n\n\n".formatted(getDateTime(HHMMSSDDMMYY)));
+        log.info("Test execution starts ! ! !");
     }
 
 
 
-
+    // TODO 1 dodanie informacji o browserze w pliku app properties i implementowanie ich podczas tworzenia beana
     // TODo 2 Stworzenie metod click, type, fill etc w base page z logowaniem itp. ??? -> Nikoniecznie możemy to ominąć i pracowac na page w pomie. do
-    // TODO 3 dodanie informacji o browserze w pliku app properties i implementowanie ich podczas tworzenia beana
-    // TODO 4 obejrzec odcinek o extent report => DO OBIADU !!!!
+    // TODO 3 obejrzec odcinek o extent report => DO OBIADU !!!!
 
 }
