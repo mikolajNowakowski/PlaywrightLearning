@@ -11,6 +11,7 @@ import com.microsoft.playwright.Page;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Properties;
@@ -21,7 +22,8 @@ public abstract class BasePage {
     @Value("${url.main}")
     private String mainUrl;
     @LazyAutowired
-    private LocatorsProperties basePageLocatorsProp;
+    @Qualifier("basePageLocators")
+    protected LocatorsProperties basePageLocatorsProp;
     @LazyAutowired
     protected Browser browser;
     @LazyAutowired
@@ -40,6 +42,11 @@ public abstract class BasePage {
         logger.info("navigating to main url");
         page.navigate(mainUrl);
     }
+
+
+
+
+
 
     protected void click(String locatorKey, LocatorsProperties locatorsProperties) {
         try {

@@ -460,3 +460,71 @@ INFO    2024-07-18 12:06:05,453 [main] com.app.tests.BaseTest beforeAll  - Test 
 INFO    2024-07-18 12:06:17,890 [main] com.app.tests.BaseTest registration  - DUPSKOOOO
 INFO    2024-07-18 12:06:17,933 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
 INFO    2024-07-18 12:06:17,939 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-18 17:50:52,114 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:50:52  18-07-24 
+
+
+
+
+
+INFO    2024-07-18 17:50:52,119 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-18 17:54:12,480 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:54:12  18-07-24 
+
+
+
+
+
+INFO    2024-07-18 17:54:12,484 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-18 17:54:24,759 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-18 17:54:24,762 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-18 17:56:31,098 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:56:31  18-07-24 
+
+
+
+
+
+INFO    2024-07-18 17:56:31,103 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-18 17:56:41,699 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-18 17:56:41,702 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-18 17:57:23,340 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:57:23  18-07-24 
+
+
+
+
+
+INFO    2024-07-18 17:57:23,345 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-18 17:57:33,747 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-18 17:57:33,751 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-18 17:59:55,532 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:59:55  18-07-24 
+
+
+
+
+
+INFO    2024-07-18 17:59:55,538 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-18 18:00:06,021 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-18 18:00:06,025 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
