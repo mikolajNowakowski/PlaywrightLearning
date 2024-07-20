@@ -29,8 +29,6 @@ public abstract class BaseTest {
     @Value("${log4j.config.path}")
     private String log4jConfigPath;
     @LazyAutowired
-    private Playwright playwright;
-    @LazyAutowired
     private Page page;
     @LazyAutowired
     private Browser browser;
@@ -74,10 +72,7 @@ public abstract class BaseTest {
         log.info("Test execution starts ! ! !");
     }
 
-
-
-    // TODO 1 dodanie informacji o browserze w pliku app properties i implementowanie ich podczas tworzenia beana
-    // TODo 2 Stworzenie metod click, type, fill etc w base page z logowaniem itp. ??? -> Nikoniecznie możemy to ominąć i pracowac na page w pomie. do
-    // TODO 3 obejrzec odcinek o extent report => DO OBIADU !!!!
+    // TODO manager fakera !!
+    // TODO więcej metody w Base Page
 
 }

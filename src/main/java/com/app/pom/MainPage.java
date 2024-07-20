@@ -13,9 +13,13 @@ public  class MainPage extends BasePage {
     @Qualifier("mainPageLocators")
     private LocatorsProperties mainPageLocatorsProp;
 
-
     public MainPage goToShop(){
         click(mainBarShopButton,basePageLocatorsProp);
+        return this;
+    }
+
+    public MainPage goToMyAccount(){
+        click(mainBarMyAccountButton,basePageLocatorsProp);
         return this;
     }
 

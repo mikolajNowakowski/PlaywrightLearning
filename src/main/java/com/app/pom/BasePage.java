@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitForSelectorState;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,17 +35,28 @@ public abstract class BasePage {
 
     protected static final Logger logger = Logger.getLogger(BasePage.class);
 
-    protected String mainBarWishListButton = "mainBarWishListButton";
-    protected String mainBarShopButton = "mainBarShopButton";
-    protected String mainBarMyAccountButton = "mainBarMyAccountButton";
+    protected final String mainBarWishListButton = "mainBarWishListButton";
+    protected final String mainBarShopButton = "mainBarShopButton";
+    protected final String mainBarMyAccountButton = "mainBarMyAccountButton";
 
     public void goToMainUrl() {
         logger.info("navigating to main url");
         page.navigate(mainUrl);
     }
 
-
-
+    protected Locator getElement(String locatorKey, LocatorsProperties locatorsProperties){
+        Locator element = null;
+        try {
+            element =  page.locator(locatorsProperties.getLocator(locatorKey));
+            extentManager.logInfo("Loading an element/s : " + locatorKey);
+            return element;
+        } catch (Throwable t) {
+            extentManager.logFailure(
+                    "Loading an element/s : " + locatorKey + " error message is :" + t.getMessage());
+            Assert.fail(t.getMessage());
+        }
+        return element;
+    }
 
 
 
@@ -59,6 +71,21 @@ public abstract class BasePage {
         }
     }
 
+
+
+    protected void click(Locator locator) {
+        try {
+            locator.click();
+            extentManager.logInfo("Clicking on locator.");
+        } catch (Throwable t) {
+            extentManager.logFailure(
+                    "Clicking on locator. Error message is :" + t.getMessage());
+            Assert.fail(t.getMessage());
+        }
+    }
+
+
+
     protected void type(String locatorKey, String text, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).type(text);
@@ -68,6 +95,18 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
+
+    protected void fill(String locatorKey, String text, LocatorsProperties locatorsProperties) {
+        try {
+            page.locator(locatorsProperties.getLocator(locatorKey)).fill(text);
+            extentManager.logInfo("Filling an Element : " + locatorKey + " with text: " + text);
+        } catch (Throwable t) {
+            extentManager.logFailure("Filling an Element : " + locatorKey + " with text: " + text + " error message is :" + t.getMessage());
+            Assert.fail(t.getMessage());
+        }
+    }
+
+
 
     protected String getText(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
@@ -81,6 +120,8 @@ public abstract class BasePage {
         }
     }
 
+
+
     protected void selectOption(String locatorKey, String option, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).selectOption(option);
@@ -90,6 +131,8 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
+
+
 
     protected void hover(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
@@ -101,6 +144,8 @@ public abstract class BasePage {
         }
     }
 
+
+
     protected void doubleClick(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).dblclick();
@@ -110,6 +155,8 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
+
+
 
     protected boolean isVisible(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
@@ -122,6 +169,8 @@ public abstract class BasePage {
             return false;
         }
     }
+
+
 
     protected void waitForSelector(String locatorKey, int timeout, LocatorsProperties locatorsProperties) {
         try {

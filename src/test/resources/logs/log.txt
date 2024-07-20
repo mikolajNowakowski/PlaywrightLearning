@@ -528,3 +528,325 @@ INFO    2024-07-18 17:59:55,532 [main] com.app.tests.BaseTest beforeAll  -
 INFO    2024-07-18 17:59:55,538 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
 INFO    2024-07-18 18:00:06,021 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
 INFO    2024-07-18 18:00:06,025 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:06:48,674 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:06:48  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:06:48,679 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:07:02,787 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:07:02,792 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:08:10,480 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:08:10  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:08:10,485 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:08:21,064 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:08:21,068 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:11:12,879 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:11:12  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:11:12,885 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:11:23,866 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:11:23,870 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:13:00,305 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:13:00  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:13:00,310 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:13:10,875 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:13:10,880 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:14:46,639 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:14:46  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:14:46,643 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:14:56,971 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:14:56,974 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-19 12:15:16,844 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:15:16  19-07-24 
+
+
+
+
+
+INFO    2024-07-19 12:15:16,848 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-19 12:15:27,135 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-19 12:15:27,138 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:26:47,635 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:26:47  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:26:47,641 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:27:00,755 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:27:00,758 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:36:39,476 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:36:39  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:36:39,481 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:36:50,646 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:36:50,649 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:38:05,660 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:38:05  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:38:05,667 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:38:16,336 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:38:16,340 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:42:50,573 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:42:50  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:42:50,578 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:43:02,089 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:43:02,093 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:43:37,891 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:43:37  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:43:37,896 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:43:49,351 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:43:49,355 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:44:18,903 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:44:18  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:44:18,908 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:44:29,730 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:44:29,735 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:45:06,762 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:45:06  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:45:06,767 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:45:17,629 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:45:17,632 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:47:32,863 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:47:32  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:47:32,868 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:47:43,670 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:47:43,674 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 16:53:28,487 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 16:53:28  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 16:53:28,492 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 16:53:40,620 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 16:53:40,627 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 17:05:39,806 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:05:39  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:05:39,813 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:05:50,665 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:05:50,673 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Firefox browser
+INFO    2024-07-20 17:07:03,876 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:07:03  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:07:03,881 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:07:15,306 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:07:15,313 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:11:07,600 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:11:07  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:11:07,605 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:11:18,442 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:11:18,445 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:17:25,658 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:17:25  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:17:25,663 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:17:36,540 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:17:36,544 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:18:03,185 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:18:03  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:18:03,191 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:18:14,418 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:18:14,422 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:23:52,799 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:23:52  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:23:52,804 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:24:03,487 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:24:03,491 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:25:25,949 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:25:25  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:25:25,954 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:25:36,566 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:25:36,570 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-20 17:27:26,784 [main] com.app.tests.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 17:27:26  20-07-24 
+
+
+
+
+
+INFO    2024-07-20 17:27:26,789 [main] com.app.tests.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-20 17:27:38,565 [main] com.app.pom.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-20 17:27:38,569 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser

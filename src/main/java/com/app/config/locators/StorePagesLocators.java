@@ -21,7 +21,7 @@ public class StorePagesLocators {
     @LazyBean
     @Qualifier("mainPageLocators")
     public LocatorsProperties mainPageLocatorsProp() {
-        String path = env.getRequiredProperty("storeMainPageLocators.path");
+        String path = env.getRequiredProperty("mainPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 
@@ -29,6 +29,20 @@ public class StorePagesLocators {
     @Qualifier("basePageLocators")
     public LocatorsProperties basePageLocatorsProp() {
         String path = env.getRequiredProperty("basePageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
+
+    @LazyBean
+    @Qualifier("mainShopPageLocators")
+    public LocatorsProperties MainShopPageLocatorsProp() {
+        String path = env.getRequiredProperty("mainShopPageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
+
+    @LazyBean
+    @Qualifier("loginRegistrationPageLocators")
+    public LocatorsProperties LoginRegistrationPageProp() {
+        String path = env.getRequiredProperty("loginRegistrationPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 }
