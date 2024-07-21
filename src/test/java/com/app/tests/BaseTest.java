@@ -2,6 +2,8 @@ package com.app.tests;
 
 import com.app.annotations.LazyAutowired;
 import com.app.utils.extent_reports.manager.ExtentManager;
+import com.app.utils.faker.FakerManager;
+import com.github.javafaker.Faker;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
@@ -34,6 +36,8 @@ public abstract class BaseTest {
     private Browser browser;
     @LazyAutowired
     protected ExtentManager extentManager;
+    @LazyAutowired
+    protected FakerManager fakerManager;
     protected static final Logger log = Logger.getLogger(BaseTest.class);
 
     @AfterEach
@@ -72,7 +76,7 @@ public abstract class BaseTest {
         log.info("Test execution starts ! ! !");
     }
 
-    // TODO manager fakera !!
-    // TODO więcej metody w Base Page
+
+    // TODO więcej metody w Base Page t dodania opcje bezarumentowe page i bez
 
 }

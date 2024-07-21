@@ -1,37 +1,55 @@
-package com.app.pom;
+package com.app.pom.base;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.WebPage;
 import com.app.model.locators.LocatorsProperties;
 import com.app.utils.extent_reports.manager.ExtentManager;
-import com.aventstack.extentreports.ExtentReports;
+import com.app.utils.popups.PopupsManager;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.options.WaitForSelectorState;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-
-import java.util.Properties;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 @WebPage
 public abstract class BasePage {
     @Value("${url.main}")
     private String mainUrl;
+
+    @Autowired
+    private ApplicationContext context;
+
+    @Autowired
+    private AnnotationConfigApplicationContext applicationContext;
+
     @LazyAutowired
     @Qualifier("basePageLocators")
     protected LocatorsProperties basePageLocatorsProp;
+
     @LazyAutowired
     protected Browser browser;
-    @LazyAutowired
+
+    @Autowired
     protected Page page;
+
     @LazyAutowired
     protected ExtentManager extentManager;
 
+    @Autowired
+    private PopupsManager popupsManager;
+
+    public <T extends BasePage> void waitForPopupClicking(Class<T> pageClass, String locatorKey, LocatorsProperties locatorsProperties) {
+        Page newPage = page.waitForPopup(() -> {
+            page.click(locatorsProperties.getLocator(locatorKey));
+        });
+        popupsManager.addPage(pageClass.getName(), newPage);
+    }
 
     protected static final Logger logger = Logger.getLogger(BasePage.class);
 
@@ -44,10 +62,16 @@ public abstract class BasePage {
         page.navigate(mainUrl);
     }
 
-    protected Locator getElement(String locatorKey, LocatorsProperties locatorsProperties){
+
+
+
+
+
+    // Get Element from Page
+    protected Locator getElement(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         Locator element = null;
         try {
-            element =  page.locator(locatorsProperties.getLocator(locatorKey));
+            element = page.locator(locatorsProperties.getLocator(locatorKey));
             extentManager.logInfo("Loading an element/s : " + locatorKey);
             return element;
         } catch (Throwable t) {
@@ -58,9 +82,17 @@ public abstract class BasePage {
         return element;
     }
 
+    protected Locator getElement(String locatorKey, LocatorsProperties locatorsProperties) {
+        return getElement(this.page, locatorKey, locatorsProperties);
+    }
 
 
-    protected void click(String locatorKey, LocatorsProperties locatorsProperties) {
+
+
+
+
+    // Click on web element
+    protected void click(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).click();
             extentManager.logInfo("Clicking on an Element : " + locatorKey);
@@ -71,6 +103,9 @@ public abstract class BasePage {
         }
     }
 
+    protected void click(String locatorKey, LocatorsProperties locatorsProperties) {
+        click(this.page, locatorKey, locatorsProperties);
+    }
 
 
     protected void click(Locator locator) {
@@ -83,7 +118,6 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
-
 
 
     protected void type(String locatorKey, String text, LocatorsProperties locatorsProperties) {
@@ -107,7 +141,6 @@ public abstract class BasePage {
     }
 
 
-
     protected String getText(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             String text = page.locator(locatorsProperties.getLocator(locatorKey)).textContent();
@@ -121,7 +154,6 @@ public abstract class BasePage {
     }
 
 
-
     protected void selectOption(String locatorKey, String option, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).selectOption(option);
@@ -131,7 +163,6 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
-
 
 
     protected void hover(String locatorKey, LocatorsProperties locatorsProperties) {
@@ -145,7 +176,6 @@ public abstract class BasePage {
     }
 
 
-
     protected void doubleClick(String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).dblclick();
@@ -155,7 +185,6 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
-
 
 
     protected boolean isVisible(String locatorKey, LocatorsProperties locatorsProperties) {
@@ -171,7 +200,6 @@ public abstract class BasePage {
     }
 
 
-
     protected void waitForSelector(String locatorKey, int timeout, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).waitFor(new Locator.WaitForOptions().setTimeout(timeout));
@@ -181,4 +209,17 @@ public abstract class BasePage {
             Assert.fail(t.getMessage());
         }
     }
+
+
+//    public <T extends BasePage> void waitForPopupClicking(Class<T> pageClass, String locatorKey, LocatorsProperties locatorsProperties) {
+//        Page newPage = page.waitForPopup(() -> {
+//            page.click(locatorsProperties.getLocator(locatorKey));
+//        });
+//
+//        pages.put(pageClass.getName(), newPage);
+//        System.out.println(pages.get(pageClass.getName()));
+//
+//    }
+
+
 }

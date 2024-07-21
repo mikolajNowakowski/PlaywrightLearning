@@ -1,8 +1,9 @@
-package com.app.pom;
+package com.app.pom.pages;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.WebPage;
 import com.app.model.locators.LocatorsProperties;
+import com.app.pom.base.BasePage;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 @WebPage
@@ -16,7 +17,6 @@ public class MainShopPage extends BasePage {
     private final String categories = "categories";
 
     public MainShopPage clickOnSpecificCategory(String categoryName) {
-        System.out.println("===========================================================================");
         getElement(categories, mainShopPageLocatorsProp)
                 .all()
                 .forEach(element -> System.out.println(element.innerText()));
