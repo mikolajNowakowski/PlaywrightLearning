@@ -45,4 +45,19 @@ public class StorePagesLocators {
         String path = env.getRequiredProperty("loginRegistrationPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
+
+    @LazyBean
+    @Qualifier("wishListPageLocators")
+    public LocatorsProperties wishListPageLocatorsProp() {
+        String path = env.getRequiredProperty("wishListPageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
+
+    @LazyBean
+    @Qualifier("myAccountPageLocators")
+    public LocatorsProperties myAccountPageLocators() {
+        String path = env.getRequiredProperty("myAccountPageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
+
 }

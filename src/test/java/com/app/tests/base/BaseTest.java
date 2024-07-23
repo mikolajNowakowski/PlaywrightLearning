@@ -1,19 +1,14 @@
-package com.app.tests;
+package com.app.tests.base;
 
 import com.app.annotations.LazyAutowired;
-import com.app.utils.extent_reports.manager.ExtentManager;
+import com.app.tests.assertions.LocalAssertions;
 import com.app.utils.faker.FakerManager;
-import com.github.javafaker.Faker;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.TestInfo;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.RegisterExtension;
@@ -27,15 +22,13 @@ import static com.app.utils.date.DataTimeGenerator.*;
 import static com.app.utils.date.patterns.DataTimePattern.*;
 
 @SpringBootTest
-public abstract class BaseTest {
+public abstract class BaseTest extends LocalAssertions {
     @Value("${log4j.config.path}")
     private String log4jConfigPath;
     @LazyAutowired
     private Page page;
     @LazyAutowired
     private Browser browser;
-    @LazyAutowired
-    protected ExtentManager extentManager;
     @LazyAutowired
     protected FakerManager fakerManager;
     protected static final Logger log = Logger.getLogger(BaseTest.class);
@@ -49,7 +42,7 @@ public abstract class BaseTest {
 
     @BeforeEach
     public void beforeEach(TestInfo testInfo) {
-        extentManager.startTest(testInfo.getTestMethod().get().getName());
+        extentManager.startTest("Tag name: %s, Method name: %s".formatted(testInfo.getTags().stream().findFirst().orElseThrow(),testInfo.getTestMethod().get().getName()));
     }
 
     @RegisterExtension
@@ -78,5 +71,6 @@ public abstract class BaseTest {
 
 
     // TODO więcej metody w Base Page t dodania opcje bezarumentowe page i bez
+    // TODO Wiecej asercji w local assertions + DODANIE SCREENSHOTÓW I LISTENERÓW!!!!!!!!!!1
 
 }

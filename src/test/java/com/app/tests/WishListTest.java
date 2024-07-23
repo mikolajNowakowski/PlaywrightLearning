@@ -3,6 +3,8 @@ package com.app.tests;
 import com.app.annotations.LazyAutowired;
 import com.app.pom.pages.MainPage;
 import com.app.pom.windows.WishListPage;
+import com.app.tests.base.BaseTest;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class WishListTest extends BaseTest {
@@ -15,11 +17,12 @@ public class WishListTest extends BaseTest {
 
 
     @Test
+    @Tag("WISH_LIST")
     public void wishListTest() {
         mainPage.goToMainUrl();
         mainPage.goToWishList();
         wishListPage.goToMyAccount();
-      wishListPage.closeWindow();
+     // wishListPage.closeWindow();
         mainPage.goToMyAccount();
     }
 

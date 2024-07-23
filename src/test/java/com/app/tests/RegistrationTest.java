@@ -4,6 +4,12 @@ import com.app.annotations.LazyAutowired;
 import com.app.pom.pages.LoginRegistrationPage;
 import com.app.pom.pages.MainPage;
 
+import com.app.pom.pages.MyAccountPage;
+
+import com.app.tests.base.BaseTest;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -13,10 +19,13 @@ public class RegistrationTest extends BaseTest {
     private MainPage mainPage;
     @LazyAutowired
     private LoginRegistrationPage loginRegistrationPage;
+    @LazyAutowired
+    private MyAccountPage myAccountPage;
 
     @ParameterizedTest
     @CsvFileSource(resources = "/registration_test.csv", numLinesToSkip = 1)
-    public void registration(String email, String password, boolean fakerEnabled) {
+    @Tag("REGISTRATION")
+    public void registrationTest(String email, String password, boolean fakerEnabled) {
         if(fakerEnabled){
             email = fakerManager.generateEmail();
             password = fakerManager.generatePassword();
@@ -26,14 +35,7 @@ public class RegistrationTest extends BaseTest {
         mainPage.goToMyAccount();
         loginRegistrationPage.typeRegistrationMail(email);
         loginRegistrationPage.typeRegistrationPassword(password);
-
         loginRegistrationPage.submitRegistration();
-
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        assertionTrue(myAccountPage.hasSpecifiedName(email.split("@")[0]));
     }
-
 }
