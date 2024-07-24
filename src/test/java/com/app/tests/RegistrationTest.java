@@ -36,6 +36,6 @@ public class RegistrationTest extends BaseTest {
         loginRegistrationPage.typeRegistrationMail(email);
         loginRegistrationPage.typeRegistrationPassword(password);
         loginRegistrationPage.submitRegistration();
-        assertionTrue(myAccountPage.hasSpecifiedName(email.split("@")[0]));
+        assertionTrue(myAccountPage.hasSpecifiedName(email.split("@")[1]));
     }
 }
