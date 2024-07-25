@@ -1,11 +1,14 @@
 package com.app.tests.base;
 
 import com.app.annotations.LazyAutowired;
+import com.app.config.extent_report.ExtentReportConfig;
+import com.app.config.faker.FakerConfig;
+import com.app.config.locators.StorePagesLocators;
+import com.app.config.playwright.PlaywrightConfiguration;
 import com.app.tests.assertions.LocalAssertions;
-import com.app.tests.handlers.ScreenshotExceptionHandler;
-import com.app.utils.date.patterns.DataTimePattern;
 import com.app.utils.faker.FakerManager;
 import com.app.utils.popups.PopupsManager;
+import com.app.utils.screenshot.ScreenshotService;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.Page;
@@ -16,24 +19,21 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestExecutionListener;
 import org.springframework.test.context.event.annotation.BeforeTestExecution;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Base64;
 import java.util.Optional;
 
 import static com.app.utils.date.DataTimeGenerator.*;
 import static com.app.utils.date.patterns.DataTimePattern.*;
 
+
 @SpringBootTest
-public abstract class BaseTest extends LocalAssertions implements TestExecutionExceptionHandler {
+public abstract class BaseTest extends LocalAssertions implements TestExecutionListener {
     @Value("${log4j.config.path}")
     private String log4jConfigPath;
-    @Value("${screenshots.path}")
-    private String screenShotsBasePath;
+    @LazyAutowired
+    private ScreenshotService screenshotService;
     @LazyAutowired
     private Page page;
     @LazyAutowired
@@ -46,15 +46,6 @@ public abstract class BaseTest extends LocalAssertions implements TestExecutionE
 
     @AfterEach
     public void after() {
-//        var scPath = "%s_%s_%s.jpg".formatted(screenShotsBasePath,
-//              "DUPA",
-//                getDateTime(DataTimePattern.HHMMSSDDMMYY_TO_FILE_NAME));
-//        Path screentShotPath = Paths.get(scPath);
-//        popupsManager.returnVisiblePage().screenshot(new Page.ScreenshotOptions().setPath(screentShotPath));
-//        extentManager.getTest().fail("TEST FAIL",
-//                MediaEntityBuilder.createScreenCaptureFromPath(scPath).build());
-
-
         extentManager.flushReports();
         page.close();
         browser.close();
@@ -62,34 +53,16 @@ public abstract class BaseTest extends LocalAssertions implements TestExecutionE
 
     @BeforeEach
     public void beforeEach(TestInfo testInfo) {
-        extentManager.startTest("Tag name: %s, Method name: %s".formatted(testInfo.getTags().stream().findFirst().orElseThrow(),testInfo.getTestMethod().get().getName()));
+        extentManager.startTest("Tag name: %s, Method name: %s".formatted(testInfo.getTags().stream().findFirst().orElseThrow(), testInfo.getTestMethod().get().getName()));
     }
 
     @RegisterExtension
     AfterTestExecutionCallback afterTestExecutionCallback = context -> {
-        var scPath = "%s_%s_%s.png".formatted(screenShotsBasePath,
-                context.getTags()
-                        .stream()
-                        .findFirst()
-                        .orElseThrow(),
-                getDateTime(DataTimePattern.HHMMSSDDMMYY_TO_FILE_NAME));
-
-
         Optional<Throwable> exception = context.getExecutionException();
         if (exception.isPresent()) {
-            Path screentShotPath = Paths.get(scPath);
-            popupsManager.returnVisiblePage().screenshot(new Page.ScreenshotOptions().setPath(screentShotPath));
-            byte[] fileContent = Files.readAllBytes(screentShotPath);
-            String base64Image = Base64.getEncoder().encodeToString(fileContent);
-
-            if (Files.exists(screentShotPath) && Files.size(screentShotPath) > 0) {
-                extentManager.getTest().fail(MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
-                Thread.sleep(1000);
-
-            } else {
-                extentManager.getTest().fail("Screenshot capture failed").addScreenCaptureFromPath(scPath);
-            }
-
+            var currentPage = popupsManager.returnVisiblePage();
+            var base64Image = screenshotService.getBase64Screenshot(currentPage);
+            extentManager.getTest().fail(MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
         } else {
             extentManager.logSuccess("Test passed successfully");
         }
@@ -105,30 +78,7 @@ public abstract class BaseTest extends LocalAssertions implements TestExecutionE
         log.info("\n\n\n\n\n Tests execution starts => %s \n\n\n\n\n".formatted(getDateTime(HHMMSSDDMMYY)));
         log.info("Test execution starts ! ! !");
     }
-
-
-
-
-
-    @Override
-    public void handleTestExecutionException(ExtensionContext extensionContext, Throwable throwable) throws Throwable {
-        var scPath = "%s %s %s.jpg".formatted(screenShotsBasePath,
-                extensionContext
-                        .getTags()
-                        .stream()
-                        .findFirst()
-                        .orElseThrow(),
-                getDateTime(DataTimePattern.HHMMSSDDMMYY));
-
-        popupsManager.returnVisiblePage().screenshot(new Page.ScreenshotOptions().setPath(Paths.get(scPath)));
-        extentManager.getTest().fail(throwable).addScreenCaptureFromPath(scPath);
-    }
-
-
     // TODO więcej metody w Base Page t dodania opcje bezarumentowe page i bez
     // TODO Wiecej asercji w local assertions + DODANIE SCREENSHOTÓW I LISTENERÓW!!!!!!!!!!1
-
-
-
-    // TODO POSTPRZATANIE BAJZLU ZE SCREENSHOTAMI !!! UZYCIE BASE 64 !!!!
+    // TODO Pisanie testów i klasy runner dla junita
 }

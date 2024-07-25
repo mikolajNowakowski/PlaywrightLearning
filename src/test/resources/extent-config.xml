@@ -5,7 +5,7 @@
         <reportHeadline>Test Execution Report</reportHeadline>
         <encoding>utf-8</encoding>
 
-        <theme>standard</theme>
+        <theme>dark</theme>
 
         <protocol>https</protocol>
         <documentTitle>Automation Test Report</documentTitle>
@@ -30,7 +30,7 @@
 
         <settings>
             <setting name="encoding" value="utf-8"/>
-            <setting name="theme" value="standard"/>
+            <setting name="theme" value="dark"/>
             <setting name="protocol" value="https"/>
             <setting name="documentTitle" value="Automation Test Report"/>
             <setting name="reportName" value="My Project Report"/>

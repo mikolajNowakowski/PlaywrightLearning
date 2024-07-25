@@ -2,6 +2,7 @@ package com.app.pom.base;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.WebPage;
+import com.app.config.playwright.PlaywrightConfiguration;
 import com.app.model.locators.LocatorsProperties;
 import com.app.utils.extent_reports.manager.ExtentManager;
 import com.app.utils.popups.PopupsManager;

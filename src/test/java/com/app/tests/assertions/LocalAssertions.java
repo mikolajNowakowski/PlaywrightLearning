@@ -2,8 +2,9 @@ package com.app.tests.assertions;
 
 import com.app.annotations.LazyAutowired;
 import com.app.utils.extent_reports.manager.ExtentManager;
+import org.junit.Assert;
+import org.opentest4j.AssertionFailedError;
 import org.junit.jupiter.api.Assertions;
-import org.springframework.stereotype.Component;
 
 
 public abstract class LocalAssertions {
@@ -13,10 +14,10 @@ public abstract class LocalAssertions {
     protected void assertionTrue(boolean result) {
         try {
             extentManager.logInfo("Checking that result is: true");
-            Assertions.assertTrue(result);
+            Assertions.assertTrue(result, "Expected: <true> but was: <" + result + ">");
             extentManager.logSuccess("Assertion PASSED ! ! !");
-        } catch (Throwable t) {
-            extentManager.logFailure("ERROR: value is different from expected. -> " + t.getMessage());
+        } catch (AssertionError t) {
+            extentManager.logFailure("ERROR: value is different from expected. -> Expected: true, but was: %b".formatted(result));
             Assertions.fail(t.getMessage());
         }
     }

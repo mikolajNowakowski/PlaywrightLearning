@@ -7,9 +7,7 @@ import com.app.pom.pages.MainPage;
 import com.app.pom.pages.MyAccountPage;
 
 import com.app.tests.base.BaseTest;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
