@@ -78,7 +78,6 @@ public abstract class BaseTest extends LocalAssertions implements TestExecutionL
         log.info("\n\n\n\n\n Tests execution starts => %s \n\n\n\n\n".formatted(getDateTime(HHMMSSDDMMYY)));
         log.info("Test execution starts ! ! !");
     }
-    // TODO więcej metody w Base Page t dodania opcje bezarumentowe page i bez
     // TODO Pisanie testów i klasy runner dla junita
 
 }
