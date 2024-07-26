@@ -81,4 +81,5 @@ public abstract class BaseTest extends LocalAssertions implements TestExecutionL
     // TODO więcej metody w Base Page t dodania opcje bezarumentowe page i bez
     // TODO Wiecej asercji w local assertions + DODANIE SCREENSHOTÓW I LISTENERÓW!!!!!!!!!!1
     // TODO Pisanie testów i klasy runner dla junita
+
 }

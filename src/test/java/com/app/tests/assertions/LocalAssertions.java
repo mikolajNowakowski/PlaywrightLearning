@@ -28,7 +28,7 @@ public abstract class LocalAssertions {
             Assertions.assertFalse(result);
             extentManager.logSuccess("Assertion PASSED ! ! !");
         } catch (Throwable t) {
-            extentManager.logFailure("ERROR: value is different from expected. -> " + t.getMessage());
+            extentManager.logFailure("ERROR: value is different from expected. -> Expected: false, but was: %b".formatted(result));
             Assertions.fail(t.getMessage());
         }
     }
@@ -39,7 +39,7 @@ public abstract class LocalAssertions {
             Assertions.assertEquals(expected, actual);
             extentManager.logSuccess("Assertion PASSED ! ! !");
         } catch (Throwable t) {
-            extentManager.logFailure("ERROR: value is different from expected. -> " + t.getMessage());
+            extentManager.logFailure("ERROR: value is different from expected. -> Expected: %s, but was: %s".formatted(expected,actual));
             Assertions.fail(t.getMessage());
         }
     }
@@ -50,7 +50,7 @@ public abstract class LocalAssertions {
             Assertions.assertNotEquals(unexpected, actual);
             extentManager.logSuccess("Assertion PASSED ! ! !");
         } catch (Throwable t) {
-            extentManager.logFailure("ERROR: value is different from expected. -> " + t.getMessage());
+            extentManager.logFailure("ERROR: value is different from expected. -> Unexpected: %s, but was: %s".formatted(unexpected,actual));
             Assertions.fail(t.getMessage());
         }
     }

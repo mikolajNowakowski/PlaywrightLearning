@@ -1980,3 +1980,115 @@ INFO    2024-07-25 17:08:03,628 [main] com.app.tests.base.BaseTest beforeAll  -
 INFO    2024-07-25 17:08:03,633 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
 INFO    2024-07-25 17:08:15,263 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
 INFO    2024-07-25 17:08:16,160 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 11:47:52,867 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 11:47:52  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 11:47:52,873 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 11:48:10,330 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 11:48:11,894 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:10:18,275 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:10:18  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:10:18,280 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:10:30,947 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:10:31,937 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:10:36,634 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:10:36  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:10:36,635 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:10:36,658 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:10:37,981 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:17:20,345 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:17:20  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:17:20,352 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:17:31,591 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:17:32,437 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:20:19,093 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:20:19  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:20:19,100 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:20:30,689 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:20:31,577 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:25:04,999 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:25:04  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:25:05,004 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:25:16,439 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:25:17,360 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:39:49,301 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:39:49  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:39:49,306 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:40:01,494 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:40:02,364 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-26 12:41:25,531 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:41:25  26-07-24 
+
+
+
+
+
+INFO    2024-07-26 12:41:25,536 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-26 12:41:36,641 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-26 12:41:37,579 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url

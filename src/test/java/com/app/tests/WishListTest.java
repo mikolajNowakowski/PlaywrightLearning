@@ -22,6 +22,7 @@ public class WishListTest extends BaseTest {
         mainPage.goToMainUrl();
         mainPage.goToWishList();
         wishListPage.goToMyAccount();
+        assertionTrue(false);
      // wishListPage.closeWindow();
         mainPage.goToMyAccount();
     }
