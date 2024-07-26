@@ -20,14 +20,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 @WebPage
 public abstract class BasePage {
+
     @Value("${url.main}")
     private String mainUrl;
-
-    @Autowired
-    private ApplicationContext context;
-
-    @Autowired
-    private AnnotationConfigApplicationContext applicationContext;
 
     @LazyAutowired
     @Qualifier("basePageLocators")
@@ -58,13 +53,11 @@ public abstract class BasePage {
     protected final String mainBarShopButton = "mainBarShopButton";
     protected final String mainBarMyAccountButton = "mainBarMyAccountButton";
 
+
     public void goToMainUrl() {
         logger.info("navigating to main url");
         page.navigate(mainUrl);
     }
-
-
-
 
 
 
@@ -89,9 +82,6 @@ public abstract class BasePage {
 
 
 
-
-
-
     // Click on web element
     protected void click(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
@@ -105,9 +95,8 @@ public abstract class BasePage {
     }
 
     protected void click(String locatorKey, LocatorsProperties locatorsProperties) {
-        click(this.page, locatorKey, locatorsProperties);
+        this.click(this.page, locatorKey, locatorsProperties);
     }
-
 
     protected void click(Locator locator) {
         try {
@@ -121,7 +110,9 @@ public abstract class BasePage {
     }
 
 
-    protected void type(String locatorKey, String text, LocatorsProperties locatorsProperties) {
+
+    // type
+    protected void type(Page page, String locatorKey, String text, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).type(text);
             extentManager.logInfo("Typing in an Element : " + locatorKey + " with text: " + text);
@@ -131,7 +122,14 @@ public abstract class BasePage {
         }
     }
 
-    protected void fill(String locatorKey, String text, LocatorsProperties locatorsProperties) {
+    protected void type(String locatorKey, String text, LocatorsProperties locatorsProperties) {
+        this.type(this.page, locatorKey, text, locatorsProperties);
+    }
+
+
+
+    // fill
+    protected void fill(Page page, String locatorKey, String text, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).fill(text);
             extentManager.logInfo("Filling an Element : " + locatorKey + " with text: " + text);
@@ -141,8 +139,14 @@ public abstract class BasePage {
         }
     }
 
+    protected void fill(String locatorKey, String text, LocatorsProperties locatorsProperties) {
+        this.fill(this.page, locatorKey, text, locatorsProperties);
+    }
 
-    protected String getText(String locatorKey, LocatorsProperties locatorsProperties) {
+
+
+    // Loading text from web element
+    protected String getText(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             String text = page.locator(locatorsProperties.getLocator(locatorKey)).textContent();
             extentManager.logInfo("Getting text from an Element : " + locatorKey + " retrieved text: " + text);
@@ -154,8 +158,14 @@ public abstract class BasePage {
         }
     }
 
+    protected String getText(String locatorKey, LocatorsProperties locatorsProperties) {
+        return this.getText(this.page, locatorKey, locatorsProperties);
+    }
 
-    protected void selectOption(String locatorKey, String option, LocatorsProperties locatorsProperties) {
+
+
+    // select option
+    protected void selectOption(Page page, String locatorKey, String option, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).selectOption(option);
             extentManager.logInfo("Selecting option: " + option + " from an Element : " + locatorKey);
@@ -165,8 +175,14 @@ public abstract class BasePage {
         }
     }
 
+    protected void selectOption(String locatorKey, String option, LocatorsProperties locatorsProperties) {
+        this.selectOption(this.page, locatorKey, option, locatorsProperties);
+    }
 
-    protected void hover(String locatorKey, LocatorsProperties locatorsProperties) {
+
+
+    // hover
+    protected void hover(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).hover();
             extentManager.logInfo("Hovering over an Element : " + locatorKey);
@@ -176,8 +192,14 @@ public abstract class BasePage {
         }
     }
 
+    protected void hover(String locatorKey, LocatorsProperties locatorsProperties) {
+        this.hover(this.page, locatorKey, locatorsProperties);
+    }
 
-    protected void doubleClick(String locatorKey, LocatorsProperties locatorsProperties) {
+
+
+    // double click on element
+    protected void doubleClick(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).dblclick();
             extentManager.logInfo("Double clicking on an Element : " + locatorKey);
@@ -187,8 +209,14 @@ public abstract class BasePage {
         }
     }
 
+    protected void doubleClick(String locatorKey, LocatorsProperties locatorsProperties) {
+        this.doubleClick(this.page, locatorKey, locatorsProperties);
+    }
 
-    protected boolean isVisible(String locatorKey, LocatorsProperties locatorsProperties) {
+
+
+    // Is element visible
+    protected boolean isVisible(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
             boolean visible = page.locator(locatorsProperties.getLocator(locatorKey)).isVisible();
             extentManager.logInfo("Checking visibility of an Element : " + locatorKey + " is visible: " + visible);
@@ -200,8 +228,14 @@ public abstract class BasePage {
         }
     }
 
+    protected boolean isVisible(String locatorKey, LocatorsProperties locatorsProperties) {
+        return this.isVisible(this.page, locatorKey, locatorsProperties);
+    }
 
-    protected void waitForSelector(String locatorKey, int timeout, LocatorsProperties locatorsProperties) {
+
+
+    // Wait for element
+    protected void waitForSelector(Page page, String locatorKey, int timeout, LocatorsProperties locatorsProperties) {
         try {
             page.locator(locatorsProperties.getLocator(locatorKey)).waitFor(new Locator.WaitForOptions().setTimeout(timeout));
             extentManager.logInfo("Waiting for an Element : " + locatorKey + " with timeout: " + timeout);
@@ -211,16 +245,7 @@ public abstract class BasePage {
         }
     }
 
-
-//    public <T extends BasePage> void waitForPopupClicking(Class<T> pageClass, String locatorKey, LocatorsProperties locatorsProperties) {
-//        Page newPage = page.waitForPopup(() -> {
-//            page.click(locatorsProperties.getLocator(locatorKey));
-//        });
-//
-//        pages.put(pageClass.getName(), newPage);
-//        System.out.println(pages.get(pageClass.getName()));
-//
-//    }
-
-
+    protected void waitForSelector(String locatorKey, int timeout, LocatorsProperties locatorsProperties) {
+        this.waitForSelector(this.page, locatorKey, timeout, locatorsProperties);
+    }
 }
