@@ -22,17 +22,17 @@ public class WishListPage extends BasePage implements WebWindowInterface {
     private PopupsManager popupsManager;
 
     public WishListPage goToShop() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarShopButton, basePageLocatorsProp);
+        click(popupsManager.getPage(this.getClass().getName()), mainBarShopButton, basePageLocators);
         return this;
     }
 
     public WishListPage goToMyAccount() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarMyAccountButton, basePageLocatorsProp);
+        click(popupsManager.getPage(this.getClass().getName()), mainBarMyAccountButton, basePageLocators);
         return this;
     }
 
     public WishListPage goToWishList() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarWishListButton, basePageLocatorsProp);
+        click(popupsManager.getPage(this.getClass().getName()), mainBarWishListButton, basePageLocators);
         return this;
     }
     @Override

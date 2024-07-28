@@ -21,7 +21,7 @@ public class RegistrationTest extends BaseTest {
     private MyAccountPage myAccountPage;
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/registration_test.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/test_data/registration/registration_test.csv", numLinesToSkip = 1)
     @Tag("REGISTRATION")
     public void registrationTest(String email, String password, boolean fakerEnabled) {
         if(fakerEnabled){

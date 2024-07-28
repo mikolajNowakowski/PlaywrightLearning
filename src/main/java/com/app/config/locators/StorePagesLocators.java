@@ -20,35 +20,35 @@ public class StorePagesLocators {
 
     @LazyBean
     @Qualifier("mainPageLocators")
-    public LocatorsProperties mainPageLocatorsProp() {
+    public LocatorsProperties mainPageLocators() {
         String path = env.getRequiredProperty("mainPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 
     @LazyBean
     @Qualifier("basePageLocators")
-    public LocatorsProperties basePageLocatorsProp() {
+    public LocatorsProperties basePageLocators() {
         String path = env.getRequiredProperty("basePageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 
     @LazyBean
     @Qualifier("mainShopPageLocators")
-    public LocatorsProperties MainShopPageLocatorsProp() {
+    public LocatorsProperties MainShopPageLocators() {
         String path = env.getRequiredProperty("mainShopPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 
     @LazyBean
     @Qualifier("loginRegistrationPageLocators")
-    public LocatorsProperties LoginRegistrationPageProp() {
+    public LocatorsProperties LoginRegistrationPage() {
         String path = env.getRequiredProperty("loginRegistrationPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 
     @LazyBean
     @Qualifier("wishListPageLocators")
-    public LocatorsProperties wishListPageLocatorsProp() {
+    public LocatorsProperties wishListPageLocators() {
         String path = env.getRequiredProperty("wishListPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
@@ -57,6 +57,13 @@ public class StorePagesLocators {
     @Qualifier("myAccountPageLocators")
     public LocatorsProperties myAccountPageLocators() {
         String path = env.getRequiredProperty("myAccountPageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
+
+    @LazyBean
+    @Qualifier("categoryPageLocators")
+    public LocatorsProperties categoryPageLocators() {
+        String path = env.getRequiredProperty("categoryPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
 

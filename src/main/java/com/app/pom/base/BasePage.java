@@ -2,7 +2,6 @@ package com.app.pom.base;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.WebPage;
-import com.app.config.playwright.PlaywrightConfiguration;
 import com.app.model.locators.LocatorsProperties;
 import com.app.utils.extent_reports.manager.ExtentManager;
 import com.app.utils.popups.PopupsManager;
@@ -14,8 +13,6 @@ import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 @WebPage
@@ -26,7 +23,7 @@ public abstract class BasePage {
 
     @LazyAutowired
     @Qualifier("basePageLocators")
-    protected LocatorsProperties basePageLocatorsProp;
+    protected LocatorsProperties basePageLocators;
 
     @LazyAutowired
     protected Browser browser;

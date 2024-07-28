@@ -11,17 +11,17 @@ public class MainShopPage extends BasePage {
 
     @LazyAutowired
     @Qualifier("mainShopPageLocators")
-    private LocatorsProperties mainShopPageLocatorsProp;
+    private LocatorsProperties mainShopPageLocators;
 
 
     private final String categories = "categories";
 
     public MainShopPage clickOnSpecificCategory(String categoryName) {
-        getElement(categories, mainShopPageLocatorsProp)
+        getElement(categories, mainShopPageLocators)
                 .all()
                 .forEach(element -> System.out.println(element.innerText()));
 
-        var category = getElement(categories, mainShopPageLocatorsProp)
+        var category = getElement(categories, mainShopPageLocators)
                 .all()
                 .stream()
                 .filter(element -> element.innerText().trim().toLowerCase().contains(categoryName.toLowerCase()))

@@ -31,11 +31,10 @@ public class WebWindowPageAspect {
         }
     }
 
-//    @After(value = "webWindowAnnotatedMethod(webWindow)", argNames = "webWindow")
-//    public void after(WebWindow webWindow) {
-//        Thread.sleep();
-//        popupsManager.setFocusToMainPage();
-//    }
+    @After(value = "webWindowAnnotatedMethod(webWindow)", argNames = "webWindow")
+    public void after(WebWindow webWindow) {
+        popupsManager.setFocusToMainPage();
+    }
 
 
 }

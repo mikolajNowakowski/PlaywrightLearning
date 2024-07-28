@@ -11,7 +11,7 @@ public class LoginRegistrationPage extends BasePage {
 
     @LazyAutowired
     @Qualifier("loginRegistrationPageLocators")
-    private LocatorsProperties loginRegistrationPageProp;
+    private LocatorsProperties loginRegistrationPageLocators;
 
     private String registrationEmail = "registrationEmail";
     private String registrationPassword = "registrationPassword";
@@ -23,42 +23,42 @@ public class LoginRegistrationPage extends BasePage {
 
 
     public LoginRegistrationPage fillRegistrationMail(String email) {
-        fill(registrationEmail, email, loginRegistrationPageProp);
+        fill(registrationEmail, email, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage typeRegistrationMail(String email) {
-        type(registrationEmail, email, loginRegistrationPageProp);
+        type(registrationEmail, email, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage fillRegistrationPassword(String password) {
-        fill(registrationPassword, password, loginRegistrationPageProp);
+        fill(registrationPassword, password, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage typeRegistrationPassword(String password) {
-        type(registrationPassword, password, loginRegistrationPageProp);
+        type(registrationPassword, password, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage fillLoginMail(String email) {
-        fill(loginUsername, email, loginRegistrationPageProp);
+        fill(loginUsername, email, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage fillLoginPassword(String password) {
-        fill(loginPassword, password, loginRegistrationPageProp);
+        fill(loginPassword, password, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage submitRegistration(){
-        click(registerSubmitButton,loginRegistrationPageProp);
+        click(registerSubmitButton, loginRegistrationPageLocators);
         return this;
     }
 
     public LoginRegistrationPage submitLogin(){
-        click(submitLoginButton,loginRegistrationPageProp);
+        click(submitLoginButton, loginRegistrationPageLocators);
         return this;
     }
 

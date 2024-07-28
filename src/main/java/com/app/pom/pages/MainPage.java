@@ -13,22 +13,22 @@ public  class MainPage extends BasePage {
 
     @LazyAutowired
     @Qualifier("mainPageLocators")
-    private LocatorsProperties mainPageLocatorsProp;
+    private LocatorsProperties mainPageLocators;
 
 
 
     public MainPage goToShop(){
-        click(mainBarShopButton,basePageLocatorsProp);
+        click(mainBarShopButton, basePageLocators);
         return this;
     }
 
     public MainPage goToMyAccount(){
-        click(mainBarMyAccountButton,basePageLocatorsProp);
+        click(mainBarMyAccountButton, basePageLocators);
         return this;
     }
 
     public MainPage goToWishList(){
-        waitForPopupClicking(WishListPage.class,mainBarWishListButton,basePageLocatorsProp);
+        waitForPopupClicking(WishListPage.class,mainBarWishListButton, basePageLocators);
         return this;
     }
 

@@ -2092,3 +2092,31 @@ INFO    2024-07-26 12:41:25,531 [main] com.app.tests.base.BaseTest beforeAll  -
 INFO    2024-07-26 12:41:25,536 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
 INFO    2024-07-26 12:41:36,641 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
 INFO    2024-07-26 12:41:37,579 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-28 12:16:01,854 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:16:01  28-07-24 
+
+
+
+
+
+INFO    2024-07-28 12:16:01,859 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-28 12:16:15,458 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-28 12:16:16,377 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
+INFO    2024-07-28 12:39:34,979 [main] com.app.tests.base.BaseTest beforeAll  - 
+
+
+
+
+ Tests execution starts => 12:39:34  28-07-24 
+
+
+
+
+
+INFO    2024-07-28 12:39:34,985 [main] com.app.tests.base.BaseTest beforeAll  - Test execution starts ! ! !
+INFO    2024-07-28 12:39:46,822 [main] com.app.config.playwright.PlaywrightConfiguration browser  - Launching Chrome browser
+INFO    2024-07-28 12:39:47,698 [main] com.app.pom.base.BasePage goToMainUrl  - navigating to main url
