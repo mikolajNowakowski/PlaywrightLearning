@@ -13,13 +13,13 @@ public class LoginRegistrationPage extends BasePage {
     @Qualifier("loginRegistrationPageLocators")
     private LocatorsProperties loginRegistrationPageLocators;
 
-    private String registrationEmail = "registrationEmail";
-    private String registrationPassword = "registrationPassword";
-    private String registerSubmitButton = "registerSubmitButton";
-    private String loginUsername = "loginUsername";
-    private String loginPassword = "loginPassword";
-    private String submitLoginButton = "submitLoginButton";
-    private String rememberMeCheckbox = "rememberMeCheckbox";
+    private final String registrationEmail = "registrationEmail";
+    private final String registrationPassword = "registrationPassword";
+    private final String registerSubmitButton = "registerSubmitButton";
+    private final String loginUsername = "loginUsername";
+    private final String loginPassword = "loginPassword";
+    private final String submitLoginButton = "submitLoginButton";
+    private final String rememberMeCheckbox = "rememberMeCheckbox";
 
 
     public LoginRegistrationPage fillRegistrationMail(String email) {

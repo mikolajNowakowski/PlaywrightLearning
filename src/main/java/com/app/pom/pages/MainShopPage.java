@@ -17,10 +17,6 @@ public class MainShopPage extends BasePage {
     private final String categories = "categories";
 
     public MainShopPage clickOnSpecificCategory(String categoryName) {
-        getElement(categories, mainShopPageLocators)
-                .all()
-                .forEach(element -> System.out.println(element.innerText()));
-
         var category = getElement(categories, mainShopPageLocators)
                 .all()
                 .stream()

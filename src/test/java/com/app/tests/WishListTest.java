@@ -1,8 +1,10 @@
 package com.app.tests;
 
 import com.app.annotations.LazyAutowired;
+import com.app.pom.pages.CategoryPage;
 import com.app.pom.pages.MainPage;
 import com.app.pom.pages.MainShopPage;
+import com.app.pom.pages.ProductPage;
 import com.app.pom.windows.WishListPage;
 import com.app.tests.base.BaseTest;
 import org.junit.jupiter.api.Tag;
@@ -19,6 +21,10 @@ public class WishListTest extends BaseTest {
     private WishListPage wishListPage;
     @LazyAutowired
     private MainShopPage mainShopPage;
+    @LazyAutowired
+    private CategoryPage categoryPage;
+    @LazyAutowired
+    private ProductPage productPage;
 
 
     @ParameterizedTest
@@ -28,6 +34,21 @@ public class WishListTest extends BaseTest {
         mainPage.goToMainUrl();
         mainPage.goToShop();
         mainShopPage.clickOnSpecificCategory(category);
+        categoryPage.clickOnSpecificProduct(productName);
+        productPage.addProductToWishListWithConfirmation();
+
+        mainPage.goToWishList();
+        assertionTrue(wishListPage.isSpecifiedNumberOfProductOnWishList(1));
+
+        var productOnWishList = wishListPage.getProductNamesFromWishList();
+        assertionEquals(productName,productOnWishList.get(0));
+
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

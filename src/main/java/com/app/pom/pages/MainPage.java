@@ -15,22 +15,23 @@ public  class MainPage extends BasePage {
     @Qualifier("mainPageLocators")
     private LocatorsProperties mainPageLocators;
 
+    protected final String mainBarWishListButton = "mainBarWishListButton";
+    protected final String mainBarShopButton = "mainBarShopButton";
+    protected final String mainBarMyAccountButton = "mainBarMyAccountButton";
 
 
-    public MainPage goToShop(){
-        click(mainBarShopButton, basePageLocators);
-        return this;
+    public void goToShop() {
+        click( mainBarShopButton, mainPageLocators);
     }
 
-    public MainPage goToMyAccount(){
-        click(mainBarMyAccountButton, basePageLocators);
-        return this;
+    public void goToMyAccount() {
+        click( mainBarMyAccountButton, mainPageLocators);
     }
 
-    public MainPage goToWishList(){
-        waitForPopupClicking(WishListPage.class,mainBarWishListButton, basePageLocators);
-        return this;
+    public void goToWishList() {
+        waitForPopupClicking(WishListPage.class,mainBarWishListButton, mainPageLocators);
     }
+
 
 
 

@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @WebPage
 public class MyAccountPage extends BasePage {
 
-    private String loggedUserName = "loggedUserName";
-    private String logOutButton = "logOutButton";
-    private String storeLogo = "storeLogo";
+    private final String loggedUserName = "loggedUserName";
+    private final String logOutButton = "logOutButton";
+    private final String storeLogo = "storeLogo";
 
     @LazyAutowired
     @Qualifier("myAccountPageLocators")

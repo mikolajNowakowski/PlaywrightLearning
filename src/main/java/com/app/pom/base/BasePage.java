@@ -3,6 +3,7 @@ package com.app.pom.base;
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.WebPage;
 import com.app.model.locators.LocatorsProperties;
+import com.app.pom.windows.WishListPage;
 import com.app.utils.extent_reports.manager.ExtentManager;
 import com.app.utils.popups.PopupsManager;
 import com.microsoft.playwright.Browser;
@@ -21,9 +22,9 @@ public abstract class BasePage {
     @Value("${url.main}")
     private String mainUrl;
 
-    @LazyAutowired
-    @Qualifier("basePageLocators")
-    protected LocatorsProperties basePageLocators;
+//    @LazyAutowired
+//    @Qualifier("basePageLocators")
+//    protected LocatorsProperties basePageLocators;
 
     @LazyAutowired
     protected Browser browser;
@@ -46,15 +47,14 @@ public abstract class BasePage {
 
     protected static final Logger logger = Logger.getLogger(BasePage.class);
 
-    protected final String mainBarWishListButton = "mainBarWishListButton";
-    protected final String mainBarShopButton = "mainBarShopButton";
-    protected final String mainBarMyAccountButton = "mainBarMyAccountButton";
 
 
     public void goToMainUrl() {
         logger.info("navigating to main url");
         page.navigate(mainUrl);
     }
+
+
 
 
 
@@ -76,7 +76,6 @@ public abstract class BasePage {
     protected Locator getElement(String locatorKey, LocatorsProperties locatorsProperties) {
         return getElement(this.page, locatorKey, locatorsProperties);
     }
-
 
 
     // Click on web element
@@ -107,7 +106,6 @@ public abstract class BasePage {
     }
 
 
-
     // type
     protected void type(Page page, String locatorKey, String text, LocatorsProperties locatorsProperties) {
         try {
@@ -124,7 +122,6 @@ public abstract class BasePage {
     }
 
 
-
     // fill
     protected void fill(Page page, String locatorKey, String text, LocatorsProperties locatorsProperties) {
         try {
@@ -139,7 +136,6 @@ public abstract class BasePage {
     protected void fill(String locatorKey, String text, LocatorsProperties locatorsProperties) {
         this.fill(this.page, locatorKey, text, locatorsProperties);
     }
-
 
 
     // Loading text from web element
@@ -160,7 +156,6 @@ public abstract class BasePage {
     }
 
 
-
     // select option
     protected void selectOption(Page page, String locatorKey, String option, LocatorsProperties locatorsProperties) {
         try {
@@ -175,7 +170,6 @@ public abstract class BasePage {
     protected void selectOption(String locatorKey, String option, LocatorsProperties locatorsProperties) {
         this.selectOption(this.page, locatorKey, option, locatorsProperties);
     }
-
 
 
     // hover
@@ -194,7 +188,6 @@ public abstract class BasePage {
     }
 
 
-
     // double click on element
     protected void doubleClick(Page page, String locatorKey, LocatorsProperties locatorsProperties) {
         try {
@@ -209,7 +202,6 @@ public abstract class BasePage {
     protected void doubleClick(String locatorKey, LocatorsProperties locatorsProperties) {
         this.doubleClick(this.page, locatorKey, locatorsProperties);
     }
-
 
 
     // Is element visible
@@ -228,7 +220,6 @@ public abstract class BasePage {
     protected boolean isVisible(String locatorKey, LocatorsProperties locatorsProperties) {
         return this.isVisible(this.page, locatorKey, locatorsProperties);
     }
-
 
 
     // Wait for element

@@ -35,11 +35,8 @@ public class PopupsManager {
 
     public Page returnVisiblePage(){
         if(isPageVisible(mainPage)){
-            System.out.println("MAIN PAGE JEST WIDOCZNA!!!!");
             return mainPage;
         }
-
-        System.out.println("INNA PAGE JEST WIDOCZNA");
 
         return pages
                 .values()
@@ -49,9 +46,7 @@ public class PopupsManager {
                 .orElseThrow(() -> new IllegalStateException("Unable to find front page."));
     }
     private boolean isPageVisible(Page page) {
-
             return (Boolean) page.evaluate("document.activeElement == document.body");
-
     }
 
 }

@@ -30,11 +30,11 @@ public class WebWindowPageAspect {
             window.setPageAsFront();
         }
     }
-
-    @After(value = "webWindowAnnotatedMethod(webWindow)", argNames = "webWindow")
-    public void after(WebWindow webWindow) {
-        popupsManager.setFocusToMainPage();
-    }
+// TODO AOP dla webpage
+//    @After(value = "webPageAnnotatedMethod(webWindow)", argNames = "webWindow")
+//    public void after(WebWindow webWindow) {
+//        popupsManager.setFocusToMainPage();
+//    }
 
 
 }

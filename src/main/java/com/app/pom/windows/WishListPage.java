@@ -5,14 +5,17 @@ import com.app.annotations.WebWindow;
 import com.app.model.locators.LocatorsProperties;
 import com.app.pom.base.BasePage;
 import com.app.utils.popups.PopupsManager;
+import com.microsoft.playwright.Locator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import java.util.List;
+
 @WebWindow
 public class WishListPage extends BasePage implements WebWindowInterface {
-    private String wishListTitle = "wishListTitle";
-    private String productsNamesOnWishList = "productsNamesOnWishList";
-    private String productsRemoveButtons = "productsRemoveButtons";
+    private final String wishListTitle = "wishListTitle";
+    private final String productsNamesOnWishList = "productsNamesOnWishList";
+    private final String productsRemoveButtons = "productsRemoveButtons";
 
     @LazyAutowired
     @Qualifier("wishListPageLocators")
@@ -21,20 +24,16 @@ public class WishListPage extends BasePage implements WebWindowInterface {
     @Autowired
     private PopupsManager popupsManager;
 
-    public WishListPage goToShop() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarShopButton, basePageLocators);
-        return this;
+
+    public List<String> getProductNamesFromWishList(){
+        return getElement(popupsManager.getPage(this.getClass().getName()), productsNamesOnWishList,wishListPageLocators).all().stream().map(Locator::innerText).toList();
     }
 
-    public WishListPage goToMyAccount() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarMyAccountButton, basePageLocators);
-        return this;
+
+    public boolean isSpecifiedNumberOfProductOnWishList(int number){
+        return getElement(popupsManager.getPage(this.getClass().getName()), productsNamesOnWishList,wishListPageLocators).all().size() == number;
     }
 
-    public WishListPage goToWishList() {
-        click(popupsManager.getPage(this.getClass().getName()), mainBarWishListButton, basePageLocators);
-        return this;
-    }
     @Override
     public void closeWindow() {
         popupsManager.getPage(this.getClass().getName()).close();
@@ -43,6 +42,7 @@ public class WishListPage extends BasePage implements WebWindowInterface {
 
     @Override
     public void setPageAsFront() {
+
         popupsManager.getPage(this.getClass().getName()).bringToFront();
     }
 }
