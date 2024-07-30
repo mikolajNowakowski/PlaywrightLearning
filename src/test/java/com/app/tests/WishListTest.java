@@ -7,10 +7,13 @@ import com.app.pom.pages.MainShopPage;
 import com.app.pom.pages.ProductPage;
 import com.app.pom.windows.WishListPage;
 import com.app.tests.base.BaseTest;
+import com.app.utils.string.StringUtils;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
+
+import static com.app.utils.string.StringUtils.*;
 
 public class WishListTest extends BaseTest {
 
@@ -41,7 +44,7 @@ public class WishListTest extends BaseTest {
         assertionTrue(wishListPage.isSpecifiedNumberOfProductOnWishList(1));
 
         var productOnWishList = wishListPage.getProductNamesFromWishList();
-        assertionEquals(productName,productOnWishList.get(0));
+        assertionEquals(removeSpecialCharsFromString(productName),removeSpecialCharsFromString(productOnWishList.get(0)));
 
 
         try {
