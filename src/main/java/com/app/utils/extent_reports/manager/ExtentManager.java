@@ -26,6 +26,9 @@ public class ExtentManager {
     public void logInfo(String message) {
         extentTest.log(Status.INFO, message);
     }
+    public void addTestDescription(String testDescription){
+        extentTest.info("Steps Description: %s".formatted(testDescription));
+    }
 
     public void logWarning(String message) {
         extentTest.log(Status.WARNING, message);
@@ -35,10 +38,8 @@ public class ExtentManager {
         extentTest.log(Status.PASS, message);
     }
 
-    public void logFailure(String message) {
-        extentTest.log(Status.FAIL, message);
+    public void logFailure(String message) { extentTest.log(Status.FAIL, message);
     }
-
     public void flushReports() {
         extentReports.flush();
     }

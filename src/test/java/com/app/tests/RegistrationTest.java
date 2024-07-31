@@ -1,6 +1,7 @@
 package com.app.tests;
 
 import com.app.annotations.LazyAutowired;
+import com.app.annotations.MultiLineDescription;
 import com.app.pom.pages.LoginRegistrationPage;
 import com.app.pom.pages.MainPage;
 
@@ -19,6 +20,16 @@ public class RegistrationTest extends BaseTest {
     private LoginRegistrationPage loginRegistrationPage;
     @LazyAutowired
     private MyAccountPage myAccountPage;
+
+
+    @MultiLineDescription("""
+            1. Go to main url
+            2. Go to my account page
+            3. Provide email into registration email element
+            4. Provide password into registration password element
+            5. Submit registration of new user
+            6. Verify that user is logged and registered now
+            """)
 
     @ParameterizedTest
     @CsvFileSource(resources = "/test_data/registration/registration_test.csv", numLinesToSkip = 1)
