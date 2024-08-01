@@ -1,4 +1,4 @@
-package com.app.tests;
+package com.app.tests.login_registration;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.MultiLineDescription;
@@ -30,9 +30,8 @@ public class RegistrationTest extends BaseTest {
             5. Submit registration of new user
             6. Verify that user is logged and registered now
             """)
-
     @ParameterizedTest
-    @CsvFileSource(resources = "/test_data/registration/registration_test.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/test_data/login_registration/registration_test.csv", numLinesToSkip = 1)
     @Tag("REGISTRATION")
     public void registrationTest(String email, String password, boolean fakerEnabled) {
         if(fakerEnabled){

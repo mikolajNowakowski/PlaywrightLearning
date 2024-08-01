@@ -73,4 +73,11 @@ public class StorePagesLocators {
         String path = env.getRequiredProperty("productPageLocators.path");
         return new LocatorsProperties(propertiesLoader.load(path));
     }
+
+    @LazyBean
+    @Qualifier("cartPageLocators")
+    public LocatorsProperties cartPageLocators() {
+        String path = env.getRequiredProperty("cartPageLocators.path");
+        return new LocatorsProperties(propertiesLoader.load(path));
+    }
 }

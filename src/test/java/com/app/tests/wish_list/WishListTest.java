@@ -1,4 +1,4 @@
-package com.app.tests;
+package com.app.tests.wish_list;
 
 import com.app.annotations.LazyAutowired;
 import com.app.annotations.MultiLineDescription;

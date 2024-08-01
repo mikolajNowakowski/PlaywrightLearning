@@ -23,7 +23,10 @@ public class CategoryPage extends BasePage {
 
     private final String titleOfProductLocator = "//h2[contains(text(),'%s')]";
 
+
+
     private final String addToCartButtonLinkedText = "Dodaj do koszyka";
+    private final String addToCartButtonLocator = "//a[text()='%s']".formatted(addToCartButtonLinkedText);
 
 
     public CategoryPage clickOnSpecificProduct(String productName) {
@@ -39,6 +42,14 @@ public class CategoryPage extends BasePage {
 
         click(productToClick);
 
+        return this;
+    }
+
+
+    public CategoryPage addSpecificProductToCart(String productName){
+       var product = getElement(products,categoryPageLocators).all().stream().filter(element -> !element.locator(titleOfProductLocator.formatted(productName)).all().isEmpty()).findFirst().orElseThrow();
+      var button = product.locator(addToCartButtonLocator);
+      click(button);
         return this;
     }
 

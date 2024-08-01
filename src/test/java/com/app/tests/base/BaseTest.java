@@ -18,13 +18,10 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.*;
-import io.qameta.allure.Description;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestExecutionListener;
 import org.springframework.test.context.event.annotation.BeforeTestExecution;
-
-import java.util.Arrays;
 import java.util.Optional;
 
 import static com.app.utils.date.DataTimeGenerator.*;
